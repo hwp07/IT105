@@ -1,0 +1,663 @@
+<mxfile host="app.diagrams.net">
+  <!-- ================================================================= -->
+  <!-- TAB 1: SƠ ĐỒ TUẦN TỰ - ĐẶT LỊCH HẸN -->
+  <!-- ================================================================= -->
+  <diagram name="1. Đặt lịch hẹn" id="Seq_Booking">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1200" pageHeight="950" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="title1" value="SƠ ĐỒ TUẦN TỰ: ĐẶT LỊCH HẸN KHÁM (BOOK APPOINTMENT)" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=16;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="550" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- PARTICIPANTS -->
+        <!-- Actor: Bệnh nhân -->
+        <mxCell id="p_bn" value=":BenhNhan" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;size=60;" vertex="1" parent="1">
+          <mxGeometry x="80" y="70" width="50" height="780" as="geometry" />
+        </mxCell>
+
+        <!-- UI: DatLichUI -->
+        <mxCell id="p_ui" value=":DatLichUI" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="70" width="110" height="780" as="geometry" />
+        </mxCell>
+
+        <!-- Service: AppointmentService -->
+        <mxCell id="p_as" value=":AppointmentService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="70" width="140" height="780" as="geometry" />
+        </mxCell>
+
+        <!-- Service: DentistService -->
+        <mxCell id="p_ds" value=":DentistService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="70" width="120" height="780" as="geometry" />
+        </mxCell>
+
+        <!-- Database: CSDL -->
+        <mxCell id="p_db" value=":CSDL" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="920" y="70" width="90" height="780" as="geometry" />
+        </mxCell>
+
+        <!-- ACTIVATIONS -->
+        <mxCell id="act_ui_1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#0F172A;fillColor=#F8FAFC;" vertex="1" parent="p_ui">
+          <mxGeometry x="50" y="80" width="10" height="670" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_as_1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#0F172A;fillColor=#F8FAFC;" vertex="1" parent="p_as">
+          <mxGeometry x="65" y="100" width="10" height="630" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_ds_1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#0F172A;fillColor=#F8FAFC;" vertex="1" parent="p_ds">
+          <mxGeometry x="55" y="120" width="10" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_db_1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#0F172A;fillColor=#F8FAFC;" vertex="1" parent="p_db">
+          <mxGeometry x="40" y="140" width="10" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- MESSAGES -->
+        <!-- 1. Chọn ngày khám -->
+        <mxCell id="m1" value="1. Chọn ngày khám, Nha sĩ &amp; Khung giờ (timeSlot)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="150" as="sourcePoint" />
+            <mxPoint x="300" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 2. checkSlotAvailable -->
+        <mxCell id="m2" value="2. checkSlotAvailable(dentistId, date, timeSlot)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="170" as="sourcePoint" />
+            <mxPoint x="525" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 3. getDentistSchedule -->
+        <mxCell id="m3" value="3. getDentistSchedule(dentistId, date)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535" y="190" as="sourcePoint" />
+            <mxPoint x="755" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 4. SELECT -->
+        <mxCell id="m4" value="4. SELECT * FROM Appointment WHERE dentistId=? AND date=?" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765" y="210" as="sourcePoint" />
+            <mxPoint x="960" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 5. Return DB -->
+        <mxCell id="m5" value="5. Trả về danh sách lịch hẹn trong ngày" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="260" as="sourcePoint" />
+            <mxPoint x="765" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 6. Return DS -->
+        <mxCell id="m6" value="6. Trả về kết quả slot của Nha sĩ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="755" y="280" as="sourcePoint" />
+            <mxPoint x="535" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 7. Self-call: check slot -->
+        <mxCell id="m7" value="7. Kiểm tra trùng slot" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535" y="300" as="sourcePoint" />
+            <mxPoint x="535" y="325" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="565" y="300" />
+              <mxPoint x="565" y="325" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- ALT FRAME -->
+        <!-- ========================================== -->
+        <mxCell id="alt_box" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=45;height=22;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontStyle=1;fontSize=11;fontColor=#0F172A;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="340" width="950" height="470" as="geometry" />
+        </mxCell>
+
+        <mxCell id="alt_cond1" value="[Còn slot trống: isAvailable == true]" style="text;html=1;fontStyle=3;fontSize=11;fontColor=#0F172A;" vertex="1" parent="alt_box">
+          <mxGeometry x="55" y="5" width="220" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Branch 1 Messages -->
+        <mxCell id="m8" value="8. Trả về: Slot hợp lệ (Available)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="525" y="375" as="sourcePoint" />
+            <mxPoint x="310" y="375" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m9" value="9. Hiển thị form xác nhận đặt lịch" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="400" as="sourcePoint" />
+            <mxPoint x="105" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m10" value="10. Bấm &quot;Xác nhận đặt hẹn&quot; (thông tin, lý do khám)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="430" as="sourcePoint" />
+            <mxPoint x="300" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m11" value="11. createAppointment(patientId, dentistId, date, timeSlot, reason)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="455" as="sourcePoint" />
+            <mxPoint x="525" y="455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m12" value="12. INSERT INTO Appointment (status='Chờ xác nhận', ...)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535" y="480" as="sourcePoint" />
+            <mxPoint x="960" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="act_db_2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#0F172A;fillColor=#F8FAFC;" vertex="1" parent="p_db">
+          <mxGeometry x="40" y="410" width="10" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m13" value="13. Ghi nhận thành công (appointmentId)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="520" as="sourcePoint" />
+            <mxPoint x="535" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m14" value="14. appointmentResult(success, appointmentId)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="525" y="545" as="sourcePoint" />
+            <mxPoint x="310" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m15" value="15. Thông báo: &quot;Đặt lịch hẹn thành công!&quot;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="570" as="sourcePoint" />
+            <mxPoint x="105" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Divider Line inside ALT -->
+        <mxCell id="alt_div" style="endArrow=none;dashed=1;html=1;strokeColor=#0F172A;strokeWidth=1.2;" edge="1" parent="alt_box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="250" as="sourcePoint" />
+            <mxPoint x="950" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="alt_cond2" value="[Hết slot trống: isAvailable == false]" style="text;html=1;fontStyle=3;fontSize=11;fontColor=#0F172A;" vertex="1" parent="alt_box">
+          <mxGeometry x="55" y="255" width="220" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Branch 2 Messages -->
+        <mxCell id="m8b" value="8b. Trả về: Trùng lịch (Slot đã kín)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="525" y="620" as="sourcePoint" />
+            <mxPoint x="310" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m9b" value="9b. getSuggestedSlots(dentistId, date)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="645" as="sourcePoint" />
+            <mxPoint x="755" y="645" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="act_ds_2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#0F172A;fillColor=#F8FAFC;" vertex="1" parent="p_ds">
+          <mxGeometry x="55" y="575" width="10" height="85" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m10b" value="10b. Query các khung giờ còn trống khác" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765" y="670" as="sourcePoint" />
+            <mxPoint x="960" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="act_db_3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeColor=#0F172A;fillColor=#F8FAFC;" vertex="1" parent="p_db">
+          <mxGeometry x="40" y="600" width="10" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m11b" value="11b. Danh sách slot trống gợi ý" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="710" as="sourcePoint" />
+            <mxPoint x="765" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m12b" value="12b. Danh sách slot gợi ý" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="755" y="735" as="sourcePoint" />
+            <mxPoint x="310" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m13b" value="13b. Báo lỗi khung giờ đã kín &amp; đề xuất khung giờ khác" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="760" as="sourcePoint" />
+            <mxPoint x="105" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ================================================================= -->
+  <!-- TAB 2: SƠ ĐỒ TUẦN TỰ - KHÁM BỆNH VÀ TẠO HÓA ĐƠN -->
+  <!-- ================================================================= -->
+  <diagram name="2. Khám bệnh &amp; Hóa đơn" id="Seq_Examination">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1200" pageHeight="950" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="title2" value="SƠ ĐỒ TUẦN TỰ: KHÁM BỆNH VÀ TẠO HÓA ĐƠN (EXAMINATION &amp; INVOICE)" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=16;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="280" y="20" width="600" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- PARTICIPANTS -->
+        <mxCell id="p2_ns" value=":NhaSi" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;size=60;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="50" height="820" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2_bn" value=":BenhNhan" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;size=60;" vertex="1" parent="1">
+          <mxGeometry x="190" y="70" width="50" height="820" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2_kui" value=":KhamBenhUI" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="70" width="110" height="820" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2_rs" value=":RecordService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="520" y="70" width="120" height="820" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2_is" value=":InvoiceService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="70" width="120" height="820" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2_db" value=":CSDL" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="930" y="70" width="90" height="820" as="geometry" />
+        </mxCell>
+
+        <!-- MESSAGES -->
+        <mxCell id="m2_1" value="1. Nhập triệu chứng, chẩn đoán &amp; kế hoạch điều trị" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="150" as="sourcePoint" />
+            <mxPoint x="375" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_2" value="2. Chọn danh sách dịch vụ đã thực hiện" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="175" as="sourcePoint" />
+            <mxPoint x="375" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_3" value="3. Bấm &quot;Lưu hồ sơ khám bệnh&quot;" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="200" as="sourcePoint" />
+            <mxPoint x="375" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_4" value="4. saveMedicalRecord(appointmentId, ...)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="225" as="sourcePoint" />
+            <mxPoint x="580" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_5" value="5. INSERT INTO MedicalRecord (...)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="250" as="sourcePoint" />
+            <mxPoint x="975" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_6" value="6. Lưu thành công (recordId)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="275" as="sourcePoint" />
+            <mxPoint x="580" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_7" value="7. UPDATE Appointment SET status='Đã khám'" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="300" as="sourcePoint" />
+            <mxPoint x="975" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_8" value="8. Cập nhật thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="325" as="sourcePoint" />
+            <mxPoint x="580" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_9" value="9. Hồ sơ khám đã lưu thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="350" as="sourcePoint" />
+            <mxPoint x="375" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Chuyển sang tạo hóa đơn -->
+        <mxCell id="m2_10" value="10. generateInvoice(recordId, servicesList)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="380" as="sourcePoint" />
+            <mxPoint x="780" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_11" value="11. INSERT INTO Invoice (status='Chưa thanh toán', ...)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="405" as="sourcePoint" />
+            <mxPoint x="975" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_12" value="12. Tạo Invoice thành công (invoiceId)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="430" as="sourcePoint" />
+            <mxPoint x="780" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LOOP FRAME -->
+        <mxCell id="loop_box" value="loop" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=22;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontStyle=1;fontSize=11;fontColor=#0F172A;align=left;" vertex="1" parent="1">
+          <mxGeometry x="700" y="455" width="310" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="loop_cond" value="[Cho mỗi dịch vụ trong servicesList]" style="text;html=1;fontStyle=3;fontSize=11;fontColor=#0F172A;" vertex="1" parent="loop_box">
+          <mxGeometry x="55" y="5" width="230" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m2_13" value="13. SELECT unitPrice FROM DentalService" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=10;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="490" as="sourcePoint" />
+            <mxPoint x="975" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_14" value="14. Trả về unitPrice" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=10;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="515" as="sourcePoint" />
+            <mxPoint x="780" y="515" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_15" value="15. lineTotal = unitPrice * quantity" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=10;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="535" as="sourcePoint" />
+            <mxPoint x="780" y="555" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="810" y="535" />
+              <mxPoint x="810" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_16" value="16. INSERT INTO InvoiceDetail (...)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=10;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="575" as="sourcePoint" />
+            <mxPoint x="975" y="575" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_17" value="17. Đã thêm chi tiết" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=10;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="595" as="sourcePoint" />
+            <mxPoint x="780" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Tính tổng tiền -->
+        <mxCell id="m2_18" value="18. calculateTotalAmount() = SUM(lineTotal)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="625" as="sourcePoint" />
+            <mxPoint x="780" y="650" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="810" y="625" />
+              <mxPoint x="810" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_19" value="19. UPDATE Invoice SET totalAmount=? WHERE invoiceId=?" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="670" as="sourcePoint" />
+            <mxPoint x="975" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_20" value="20. Cập nhật tổng tiền thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="695" as="sourcePoint" />
+            <mxPoint x="780" y="695" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_21" value="21. invoiceInfo(invoiceId, totalAmount)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="720" as="sourcePoint" />
+            <mxPoint x="375" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_22" value="22. Hoàn tất khám &amp; chuyển thông tin sang thu ngân" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="745" as="sourcePoint" />
+            <mxPoint x="85" y="745" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- OPT FRAME -->
+        <mxCell id="opt_box" value="opt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=45;height=22;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontStyle=1;fontSize=11;fontColor=#0F172A;align=left;" vertex="1" parent="1">
+          <mxGeometry x="170" y="765" width="650" height="115" as="geometry" />
+        </mxCell>
+
+        <mxCell id="opt_cond" value="[Bệnh nhân yêu cầu in hóa đơn tại quầy]" style="text;html=1;fontStyle=3;fontSize=11;fontColor=#0F172A;" vertex="1" parent="opt_box">
+          <mxGeometry x="50" y="5" width="260" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m2_23" value="23. Yêu cầu in hóa đơn viện phí" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="215" y="800" as="sourcePoint" />
+            <mxPoint x="375" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_24" value="24. printInvoice(invoiceId)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="820" as="sourcePoint" />
+            <mxPoint x="780" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_25" value="25. Trả về dữ liệu mẫu in hóa đơn" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="845" as="sourcePoint" />
+            <mxPoint x="375" y="845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m2_26" value="26. Xuất phiếu in hóa đơn viện phí" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="865" as="sourcePoint" />
+            <mxPoint x="215" y="865" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ================================================================= -->
+  <!-- TAB 3: SƠ ĐỒ TUẦN TỰ - HỦY LỊCH HẸN -->
+  <!-- ================================================================= -->
+  <diagram name="3. Hủy lịch hẹn" id="Seq_Cancel">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1200" pageHeight="950" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="title3" value="SƠ ĐỒ TUẦN TỰ: HỦY LỊCH HẸN (CANCEL APPOINTMENT)" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=16;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="550" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- PARTICIPANTS -->
+        <mxCell id="p3_bn" value=":BenhNhan" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;size=60;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="50" height="700" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p3_hui" value=":HuyLichUI" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="230" y="70" width="110" height="700" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p3_as" value=":AppointmentService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="440" y="70" width="140" height="700" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p3_db" value=":CSDL" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="670" y="70" width="90" height="700" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p3_sms" value=":SMSService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="840" y="70" width="110" height="700" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p3_ns" value=":NhaSi" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontColor=#0F172A;fontStyle=1;fontSize=12;size=60;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="70" width="50" height="700" as="geometry" />
+        </mxCell>
+
+        <!-- MESSAGES -->
+        <mxCell id="m3_1" value="1. Chọn lịch hẹn cần hủy &amp; Nhập lý do" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="150" as="sourcePoint" />
+            <mxPoint x="285" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_2" value="2. requestCancelAppointment(appointmentId, reason)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="180" as="sourcePoint" />
+            <mxPoint x="510" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_3" value="3. SELECT status, dentistId, date, timeSlot FROM Appointment WHERE appointmentId=?" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="210" as="sourcePoint" />
+            <mxPoint x="715" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_4" value="4. Trả về thông tin lịch hẹn (status)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="240" as="sourcePoint" />
+            <mxPoint x="510" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ALT FRAME -->
+        <mxCell id="alt3_box" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;width=45;height=22;strokeColor=#0F172A;strokeWidth=1.5;fillColor=#FFFFFF;fontStyle=1;fontSize=11;fontColor=#0F172A;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="1040" height="460" as="geometry" />
+        </mxCell>
+
+        <mxCell id="alt3_cond1" value="[Trạng thái hợp lệ: status == 'Chờ xác nhận' HOẶC status == 'Đã xác nhận']" style="text;html=1;fontStyle=3;fontSize=11;fontColor=#0F172A;" vertex="1" parent="alt3_box">
+          <mxGeometry x="55" y="5" width="450" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m3_5" value="5. UPDATE Appointment SET status='Đã hủy', cancelReason=? WHERE appointmentId=?" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="310" as="sourcePoint" />
+            <mxPoint x="715" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_6" value="6. Cập nhật thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="340" as="sourcePoint" />
+            <mxPoint x="510" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_7" value="7. cancelResult(success, message=&quot;Hủy lịch thành công&quot;)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="370" as="sourcePoint" />
+            <mxPoint x="285" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_8" value="8. Thông báo: &quot;Lịch hẹn đã được hủy thành công&quot;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="400" as="sourcePoint" />
+            <mxPoint x="85" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Async Message -->
+        <mxCell id="m3_9" value="9. [Async] sendCancellationAlert(dentistId, date, timeSlot, reason)" style="html=1;verticalAlign=bottom;endArrow=open;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="440" as="sourcePoint" />
+            <mxPoint x="895" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_10" value="10. [Async] SMS: &quot;Lịch hẹn ngày X khung giờ Y đã được bệnh nhân hủy&quot;" style="html=1;verticalAlign=bottom;endArrow=open;strokeColor=#0F172A;strokeWidth=1.3;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="895" y="470" as="sourcePoint" />
+            <mxPoint x="1055" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Divider Line inside ALT -->
+        <mxCell id="alt3_div" style="endArrow=none;dashed=1;html=1;strokeColor=#0F172A;strokeWidth=1.2;" edge="1" parent="alt3_box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="240" as="sourcePoint" />
+            <mxPoint x="1040" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="alt3_cond2" value="[Trạng thái không hợp lệ: status == 'Đã khám' HOẶC status == 'Đã hủy']" style="text;html=1;fontStyle=3;fontSize=11;fontColor=#0F172A;" vertex="1" parent="alt3_box">
+          <mxGeometry x="55" y="245" width="450" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Branch 2 Messages -->
+        <mxCell id="m3_5b" value="5b. cancelResult(failed, message=&quot;Lịch hẹn đã khám hoặc đã hủy, không thể thao tác!&quot;)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="560" as="sourcePoint" />
+            <mxPoint x="285" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m3_6b" value="6b. Báo lỗi: &quot;Không thể hủy lịch hẹn ở trạng thái hiện tại!&quot;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endFill=0;strokeColor=#0F172A;strokeWidth=1.2;fontSize=11;fontColor=#0F172A;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="600" as="sourcePoint" />
+            <mxPoint x="85" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
