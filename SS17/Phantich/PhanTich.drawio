@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Trang-1" id="8vXPhwuVh9revr4nmjhh">
+    <mxGraphModel dx="1823" dy="1098" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="light-dark(#ffffff, #121212)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" value="" vertex="1">
+          <mxGeometry height="987" width="20" x="77" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-5" parent="F50Zmd-6RBc1LA7Yemjq-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="199" width="10" x="5" y="97" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":RikkeiLogistics    " vertex="1">
+          <mxGeometry height="987" width="100" x="392" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-6" parent="F50Zmd-6RBc1LA7Yemjq-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="816" width="10" x="45" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":Bank" vertex="1">
+          <mxGeometry height="987" width="100" x="760" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-13" parent="F50Zmd-6RBc1LA7Yemjq-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="222" width="10" x="45" y="297" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-7" edge="1" parent="1" source="F50Zmd-6RBc1LA7Yemjq-5" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;" target="F50Zmd-6RBc1LA7Yemjq-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="424.3816923253678" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Bấm thanh toán" vertex="1">
+          <mxGeometry height="30" width="136" x="198" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-9" edge="1" parent="1" source="F50Zmd-6RBc1LA7Yemjq-6" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;endArrow=classicThin;endFill=1;dashPattern=8 8;dashed=1;" target="F50Zmd-6RBc1LA7Yemjq-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="91.89536539713549" y="336.3515307108562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Trả mã QR" vertex="1">
+          <mxGeometry height="30" width="95" x="218.5" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-11" edge="1" parent="1" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="266" y="395" />
+            </Array>
+            <mxPoint x="93.5" y="395" as="sourcePoint" />
+            <mxPoint x="438.5" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Thanh toán" vertex="1">
+          <mxGeometry height="30" width="152" x="190" y="369" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-14" edge="1" parent="1" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;" target="F50Zmd-6RBc1LA7Yemjq-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620.5" y="479" />
+            </Array>
+            <mxPoint x="448" y="479" as="sourcePoint" />
+            <mxPoint x="793" y="479" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Gửi yê cầu thanh toán(API + API Key)" vertex="1">
+          <mxGeometry height="30" width="250" x="506" y="447" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-16" edge="1" parent="1" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;dashed=1;dashPattern=8 8;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="626.5" y="565" />
+            </Array>
+            <mxPoint x="805" y="565" as="sourcePoint" />
+            <mxPoint x="448" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Trả kết quả (Webhook + HMAC)" vertex="1">
+          <mxGeometry height="30" width="259" x="513" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-18" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":Message Queue" vertex="1">
+          <mxGeometry height="987" width="100" x="1163" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-19" parent="F50Zmd-6RBc1LA7Yemjq-18" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="222" width="10" x="45" y="449" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-20" edge="1" parent="1" source="F50Zmd-6RBc1LA7Yemjq-13" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;" target="F50Zmd-6RBc1LA7Yemjq-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1208.6953699448532" y="620.0060945398668" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Gửi Webhook" vertex="1">
+          <mxGeometry height="30" width="152" x="931" y="589" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-22" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":Message Queue" vertex="1">
+          <mxGeometry height="992" width="100" x="1574" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-23" parent="F50Zmd-6RBc1LA7Yemjq-22" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="358" width="10" x="45" y="537" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-26" parent="F50Zmd-6RBc1LA7Yemjq-22" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="50" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-27" edge="1" parent="F50Zmd-6RBc1LA7Yemjq-22" style="html=1;align=left;spacingLeft=2;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;" target="F50Zmd-6RBc1LA7Yemjq-26" value="Xác thực HMAC-SHA256">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="85" y="625" />
+              <mxPoint x="85" y="655" />
+            </Array>
+            <mxPoint x="55" y="625" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-29" parent="F50Zmd-6RBc1LA7Yemjq-22" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="50" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-30" edge="1" parent="F50Zmd-6RBc1LA7Yemjq-22" style="html=1;align=left;spacingLeft=2;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;" value="Gạch nợ">
+          <mxGeometry relative="1" x="0.0478" y="2" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="85" y="731" />
+              <mxPoint x="85" y="761" />
+            </Array>
+            <mxPoint x="55" y="731" as="sourcePoint" />
+            <mxPoint x="60" y="761" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-24" edge="1" parent="1" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;" target="F50Zmd-6RBc1LA7Yemjq-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1414.5" y="702" />
+            </Array>
+            <mxPoint x="1218" y="702" as="sourcePoint" />
+            <mxPoint x="1611" y="702" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Consumer Worker xử lý" vertex="1">
+          <mxGeometry height="30" width="175" x="1339" y="667" as="geometry" />
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-31" edge="1" parent="1" source="F50Zmd-6RBc1LA7Yemjq-23" style="edgeStyle=sequenceEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;libavoidRouting=0;curved=0;dashed=1;dashPattern=8 8;" target="F50Zmd-6RBc1LA7Yemjq-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="484.6822509765625" y="970.1770477294922" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F50Zmd-6RBc1LA7Yemjq-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Cập nhật trạng thái" vertex="1">
+          <mxGeometry height="30" width="166" x="953" y="937" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
